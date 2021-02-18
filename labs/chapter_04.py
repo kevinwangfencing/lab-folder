@@ -16,7 +16,7 @@ native_distance = -20
 # Initial number of drinks in the canteen
 i_drink_canteen = 10
 import random
-oasis = random.randint(1,20)
+oasis = random.randint(1, 20)
 
 # 1, printing statements
 print("Welcome to Camel!")
@@ -27,6 +27,7 @@ print("Survive your desert trek and out run the natives.")
 # Options
 done = False
 while done == False:
+    print("==============================")
     print("A. Drink from your canteen.")
     print("B. Ahead moderate speed.")
     print("C. Ahead full speed.")
@@ -44,11 +45,11 @@ while done == False:
 
     # When user choose E
     elif choice == "E":
-        print("Miles traveled: " , miles_traveled, "miles")
-        print("Thirst level: " , thirst)
-        print("Camel tirdness: " , camel_tiredness)
-        print("Native distance: " , native_distance, "miles")
-        print("Drinks in canteen: " , i_drink_canteen)
+        print("Miles traveled: ", miles_traveled, "miles")
+        print("Thirst level: ", thirst)
+        print("Camel tirdness: ", camel_tiredness)
+        print("Native distance: ", native_distance, "miles")
+        print("Drinks in canteen: ", i_drink_canteen)
 
     # When user choose D
     elif choice == "D":
@@ -56,38 +57,38 @@ while done == False:
         print("Camel is happy! ")
 
         import random
-        native_d_random = random.randint(7,14)
+        native_d_random = random.randint(7, 14)
 
         native_distance = (native_distance + native_d_random)
         distance_behind = (miles_traveled - native_distance)
-        print("The native are" , distance_behind, "miles behind you.")
+        print("The native are", distance_behind, "miles behind you.")
 
     # When user choose C
     elif choice == "C":
         import random
-        full_s_random = random.randint(10,20)
+        full_s_random = random.randint(10, 20)
         miles_traveled = miles_traveled + full_s_random
-        print("You have travelled" , miles_traveled, "miles.")
+        print("You have travelled", miles_traveled, "miles.")
         
         # Add one to thirst
         thirst = thirst + 1
 
         # Add random to tiredness from 1 to 3
-        camel_t_random = random.randint(1,3)
+        camel_t_random = random.randint(1, 3)
         camel_tiredness = (camel_tiredness + camel_t_random)
 
         # Move natives 7 to 14 miles
-        native_d_random = random.randint(7,14)
+        native_d_random = random.randint(7, 14)
         native_distance = (native_distance + native_d_random)
         distance_behind = (miles_traveled - native_distance)
-        print("The native are" , distance_behind, "miles behind you.")
+        print("The native are", distance_behind, "miles behind you.")
 
     # When user choose B
     elif choice == "B":
         import random
         moederate_s_random = random.randint(5,12)
         miles_traveled = miles_traveled + moederate_s_random
-        print("You have travelled" , miles_traveled, "miles.")
+        print("You have travelled", miles_traveled, "miles.")
         
         # Add one to thirst
         thirst = thirst + 1
@@ -96,10 +97,10 @@ while done == False:
         camel_tiredness = camel_tiredness + 1
 
         # Move natives 7 to 14 miles
-        native_d_random = random.randint(7,14)
+        native_d_random = random.randint(7, 14)
         native_distance = (native_distance + native_d_random)
         distance_behind = (miles_traveled - native_distance)
-        print("The native are" , distance_behind, "miles behind you.")
+        print("The native are", distance_behind, "miles behind you.")
 
     # When user choose A
     elif choice == "A":
@@ -119,7 +120,6 @@ while done == False:
     elif thirst > 4:
         print("You are very thirsty! ")
 
-
     # Camel tiredness greater than eight
     if camel_tiredness > 8:
         print("Your camel is dead ")
@@ -127,7 +127,6 @@ while done == False:
     # Camel tiredness greater than five
     elif camel_tiredness > 5:
         print("Your camel is getting tired ")
-
 
     # Native caught up
     if native_distance >= miles_traveled:
