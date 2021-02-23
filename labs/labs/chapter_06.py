@@ -45,3 +45,33 @@ for i in range (rows - 2):
 print("\n", end = "")
 for i in range(columns):
     print("o", end = "")
+
+
+# 6.3 part 3
+# Get user input
+n = int(input("Enter number:"))
+
+# Rows in the range of number entered
+for row in range(n):
+    # Number goes up
+    for i in range(0 + row, n):
+        print(2*i + 1, end = " ")
+    # Spacing in the middle
+    for j in range(row):
+        print("  ", end = "  ")
+    # Reversed the numbers
+    for i in reversed(range(0 + row, n)):
+        print(2*i + 1, end = " ")
+
+    print()
+
+# Everything goes reversed
+for row in reversed(range(n)):
+    for i in range(0 + row, n):
+        print(2*i + 1, end = " ")
+    for j in range(row):
+        print("  ", end = "  ")
+    for i in range(0 + row, n):
+        print(2*i + 1, end = " ")
+
+    print()
