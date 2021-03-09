@@ -45,3 +45,34 @@ def find(my_list,key):
 find(my_list, 12)
 find(my_list, 91)
 find(my_list, 80)
+
+# ----------------------------------------------------
+import random
+
+def create_list(number):
+    list = []
+    for i in range(number):
+        list.append(random.randint(1,6))
+    return list
+
+def count_list(list,key):
+    total = 0
+    for i in list:
+        if i == key:
+            total += 1
+    return total
+
+def average_list(list):
+    total = 0
+    for i in list:
+        total += 1
+    return total/len(list)
+
+list = create_list(10000)
+
+print(count_list(list,1))
+print(count_list(list,2))
+print(count_list(list,3))
+print(count_list(list,4))
+print(count_list(list,5))
+print(count_list(list,6))
